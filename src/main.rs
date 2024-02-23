@@ -46,9 +46,10 @@ async fn get_ip_data(req: Request<()>) -> tide::Result {
                     ip_data.ip,
                     domain,
                     format!(
-                        "{} {}",
+                        "{}{}[ping:{}]",
                         emojic::country_flag(country.alpha2),
-                         ip_data.id
+                         ip_data.id,
+                         ip_data.ping_avg.unwrap_or(0.0)
                         )
                 )
             })
