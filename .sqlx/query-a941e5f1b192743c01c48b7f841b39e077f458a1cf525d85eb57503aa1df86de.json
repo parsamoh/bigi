@@ -1,0 +1,62 @@
+{
+  "db_name": "SQLite",
+  "query": "\n                SELECT * \n                FROM ips\n                WHERE cf_country = ?\n                ORDER BY ping_avg ASC\n                LIMIT ?\n            ",
+  "describe": {
+    "columns": [
+      {
+        "name": "id",
+        "ordinal": 0,
+        "type_info": "Int64"
+      },
+      {
+        "name": "ip",
+        "ordinal": 1,
+        "type_info": "Text"
+      },
+      {
+        "name": "down_avg",
+        "ordinal": 2,
+        "type_info": "Int64"
+      },
+      {
+        "name": "up_avg",
+        "ordinal": 3,
+        "type_info": "Int64"
+      },
+      {
+        "name": "total_avg",
+        "ordinal": 4,
+        "type_info": "Float"
+      },
+      {
+        "name": "ip_country",
+        "ordinal": 5,
+        "type_info": "Text"
+      },
+      {
+        "name": "cf_country",
+        "ordinal": 6,
+        "type_info": "Text"
+      },
+      {
+        "name": "ping_avg",
+        "ordinal": 7,
+        "type_info": "Float"
+      }
+    ],
+    "parameters": {
+      "Right": 2
+    },
+    "nullable": [
+      false,
+      false,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ]
+  },
+  "hash": "a941e5f1b192743c01c48b7f841b39e077f458a1cf525d85eb57503aa1df86de"
+}
